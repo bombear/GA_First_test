@@ -2,7 +2,7 @@ var items = [];
 
 function setup() {
     createCanvas(window.innerWidth,window.innerHeight);
-    for (var i=0;i<10;i++){
+    for (var i=0;i<2;i++){
         items.push(new item());
    }
 }
@@ -14,6 +14,7 @@ function draw() {
         
         items[i].render();
         items[i].fall();
+        items[i].rotate(angle);
     }
 }
 
