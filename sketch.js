@@ -1,7 +1,7 @@
 var items = [];
 
 function setup() {
-    createCanvas(800,800);
+    createCanvas(window.innerWidth,window.innerHeight);
     for (var i=0;i<10;i++){
         items.push(new item());
    }
