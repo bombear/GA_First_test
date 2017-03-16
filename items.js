@@ -8,9 +8,10 @@ function item(){
         this.noise[i] = random(0.2,2);
     }
     
-    this.gravity = 0.1;
+    this.gravity = 0.2;
     this.velocity = 0;
     this.rotateSpeed=0.1;
+    this.momentumKept=0.7;
     
     
     this.render=function(){
@@ -43,7 +44,7 @@ function item(){
         
         if (this.pos.y>height-this.r) {
             //this.pos.y=height;
-            this.velocity*=-0.7;
+            this.velocity*=-this.momentumKept;
             if(Math.abs(this.velocity)<0.5 && this.pos.y>height-this.r-20) {
                 this.velocity=0;
             }
